@@ -125,7 +125,7 @@ header {
 }
 .intro {
   height: 950px;
-  background-image: url("/images/intro-bg.jpeg");
+  background-image: url("../images/intro-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -215,7 +215,7 @@ header {
 
 /*Serevices Start*/
 .services {
-  background-image: url("/images/services-bg.jpeg");
+  background-image: url("../images/services-bg.jpeg");
   padding: 120px 0px;
   background-size: cover;
 }
