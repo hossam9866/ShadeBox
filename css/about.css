@@ -1,0 +1,35 @@
+/*About Us Banner Start*/
+.banner {
+  background-image: url("../images/about-us.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 320px;
+}
+.banner p {
+  color: var(--primary-color);
+  text-align: center;
+
+  font-family: var(--font-primary);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 56.16px */
+}
+
+@media (max-width: 1100px) {
+  .banner {
+    height: 220px;
+  }
+}
+@media (max-width: 800px) {
+  .banner {
+    height: 180px;
+  }
+}
+@media (max-width: 600px) {
+  .banner {
+    height: 150px;
+  }
+}
+
+/*About Us Banner End*/

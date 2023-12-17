@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MixItUp Filtering Example</title>
+    <!-- Link MixItUp CSS -->
+
+    <style>
+      /* Your card styles here */
+      .card {
+        width: 200px;
+        height: 150px;
+        margin: 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        transition: opacity 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your HTML structure -->
+    <button id="b3" type="button" data-filter="all">All</button>
+    <button type="button" data-filter=".category-a">Category A</button>
+    <button id="b2" type="button" data-filter=".category-b">Category B</button>
+    <button id="b1" type="button" data-filter=".category-c">Category C</button>
+
+    <div class="container">
+      <div class="mix category-a" data-order="1">1</div>
+      <div class="mix category-b" data-order="1">2</div>
+      <div class="mix category-b category-c" data-order="3">3</div>
+      <div class="mix category-a category-d" data-order="4">4</div>
+    </div>
+
+    <!-- Include MixItUp JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script>
+      let containerEl = document.querySelector(".container");
+      var mixer = mixitup(containerEl, {
+        animation: {
+          duration: 250,
+          nudge: true,
+          reverseOut: false,
+          effects: "fade translateZ(-100px)",
+        },
+      });
+    </script>
+  </body>
+</html>
