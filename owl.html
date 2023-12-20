@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <style>
+      .item {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+      }
+      h4 {
+        color: blue;
+      }
+      /* Styling for the modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .modal.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .close {
+        color: #fff;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #ccc;
+        text-decoration: none;
+      }
+
+      .modal.active .close {
+        opacity: 1;
+      }
+    </style>
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  </head>
+  <body>
+    <div class="owl-carousel owl-theme">
+      <div class="item"><h4>1</h4></div>
+      <div class="item"><h4>2</h4></div>
+      <div class="item"><h4>3</h4></div>
+      <div class="item"><h4>4</h4></div>
+      <div class="item"><h4>5</h4></div>
+      <div class="item"><h4>6</h4></div>
+      <div class="item"><h4>7</h4></div>
+      <div class="item"><h4>8</h4></div>
+      <div class="item"><h4>9</h4></div>
+      <div class="item"><h4>10</h4></div>
+      <div class="item"><h4>11</h4></div>
+      <div class="item"><h4>12</h4></div>
+    </div>
+    <!-- Image Popup -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal('imageModal')">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
+
+    <!-- Video Popup -->
+    <div id="videoModal" class="modal">
+      <span class="close" onclick="closeModal('videoModal')">&times;</span>
+      <video class="modal-content" controls id="video01">
+        <source src="" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Trigger elements for image and video -->
+    <img
+      src="https://babechic.co/wp-content/uploads/2023/10/still-life-bra-lingerie-1.png"
+      onclick="openImageModal(this.src)" />
+    <video
+      width="320"
+      height="240"
+      controls
+      onclick="openVideoModal('path_to_your_video.mp4')">
+      <source src="path_to_your_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        smartSpeed: 900,
+        loop: true,
+        margin: 10,
+        nav: false,
+        center: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+      //dddddddddddd
+      // Function to open image modal with animation
+      function openImageModal(imgSrc) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        setTimeout(function () {
+          modal.classList.add("active");
+          modalImg.src = imgSrc;
+          modalImg.style.opacity = "1";
+        }, 50);
+      }
+
+      // Function to open video modal with animation
+      function openVideoModal(videoSrc) {
+        var modal = document.getElementById("videoModal");
+        var modalVideo = document.getElementById("video01");
+        modal.style.display = "block";
+        setTimeout(function () {
+          modal.classList.add("active");
+          modalVideo.src = videoSrc;
+          modalVideo.style.opacity = "1";
+        }, 50);
+      }
+
+      // Function to close modal with animation
+      function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.classList.remove("active");
+        setTimeout(function () {
+          modal.style.display = "none";
+        }, 300);
+      }
+      style.display = "none";
+    </script>
+  </body>
+</html>

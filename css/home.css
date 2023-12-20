@@ -249,7 +249,7 @@ header {
 
 /*Story Start*/
 .story {
-  background-color: var(--bg-black);
+  /* background-color: var(--bg-black); */
 }
 .story .info img {
   width: 130px;

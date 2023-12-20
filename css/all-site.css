@@ -18,6 +18,9 @@
 #content {
   background-color: var(--bg-black);
 }
+.story {
+  background-color: rgba(24, 22, 22, 0.5);
+}
 h1,
 h2,
 h3,
