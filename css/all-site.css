@@ -15,6 +15,9 @@
   margin: 0;
   padding: 0;
 }
+#content {
+  background-color: var(--bg-black);
+}
 h1,
 h2,
 h3,
