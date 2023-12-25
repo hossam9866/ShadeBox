@@ -195,12 +195,13 @@ video {
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 50px 20px 20px 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-color);
   box-sizing: border-box;
   width: 800px;
   z-index: 9999;
   animation: popupAnimation 0.3s ease-in-out;
   background-color: var(--bg-gray);
+  border-radius: 16px;
 }
 .popup .carousel-item {
 }
@@ -245,3 +246,33 @@ video {
   }
 }
 /*popup end*/
+
+/*Story Start*/
+.story {
+  /* background-color: var(--bg-black); */
+}
+.story .info img {
+  width: 130px;
+}
+.story .info p {
+  color: var(--white-color);
+
+  font-family: var(--font-primary);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 56.16px */
+}
+.story .ceo a {
+  color: var(--primary-color);
+
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*Story End*/

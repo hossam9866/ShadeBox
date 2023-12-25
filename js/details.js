@@ -4,7 +4,7 @@ owlOptions = {
   loop: true,
   margin: 10,
   nav: false,
-  center: true,
+  center: false,
   autoplay: false,
   autoplayTimeout: 4000,
   onDragged: onDragged,

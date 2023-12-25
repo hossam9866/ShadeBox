@@ -143,6 +143,57 @@ header .header-social a {
 }
 /*Header End*/
 
+/*Story Start*/
+.story {
+  /* background-color: var(--bg-black); */
+}
+.story .info img {
+  width: 130px;
+}
+.story .info p {
+  color: var(--white-color);
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 56.16px */
+}
+.story .ceo a {
+  color: var(--primary-color);
+
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .story .info p {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .story .info p {
+    font-size: 40px;
+  }
+  .story .info img {
+    width: 90px;
+  }
+}
+@media (max-width: 576px) {
+  .story .info p {
+    font-size: 32px;
+  }
+  .story .info img {
+    margin-bottom: 20px;
+  }
+}
+
+/*Story End*/
+
 /*Footer Start*/
 footer {
 }
@@ -263,5 +314,16 @@ footer .send-mail .form button i {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 1200px) {
+  footer .send-mail .text {
+    font-size: 36px;
+  }
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
 }
 /*Footer End*/

@@ -29,6 +29,25 @@ header {
 .intro .content {
   padding-bottom: 150px;
 }
+@media (max-width: 992px) {
+  .intro h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  .intro {
+    height: 750px;
+  }
+  .intro h2 {
+    font-size: 35px;
+    line-height: 43.504px;
+  }
+  .intro p {
+    font-size: 16px;
+  }
+}
 
 /*Intro End*/
 
@@ -46,7 +65,7 @@ header {
   line-height: normal;
   padding-bottom: 21px;
 }
-.about .left .story {
+.about .left .story-part {
   color: var(--white-color);
   font-family: var(--font-primary);
   font-size: 43px;
@@ -84,9 +103,25 @@ header {
   font-weight: 700;
   line-height: 56px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   .about .right .title {
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 46px;
+  }
+  .about .left .story-part {
+    font-size: 35px;
+    line-height: 46px;
+    padding-bottom: 40px;
+  }
+  .about .left .action {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  .about .right .description {
+    font-size: 16px;
   }
 }
 /*About End*/
@@ -97,11 +132,15 @@ header {
   padding: 120px 0px;
   background-size: cover;
 }
+.services:last-child {
+}
 .services .service {
   background-color: var(--bg-gray);
   padding: 50px 40px;
   transition: var(--o-transition);
   width: 300px;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 
 .services .service img {
@@ -164,6 +203,39 @@ header {
 .services .service:hover .highlight {
   color: var(--bg-black);
 }
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 0px;
+  }
+  .services .service {
+    background-color: var(--bg-gray);
+    padding: 50px 20px;
+    transition: var(--o-transition);
+    width: 250px;
+  }
+  .services .service img {
+    width: 75px;
+  }
+  .services .service .content .title {
+    font-size: 16px;
+  }
+  .services .service .content .description {
+    font-size: 14px;
+  }
+  .services .service .p-numbers {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .services {
+    padding: 40px 0px;
+  }
+  .services .service {
+    background-color: var(--bg-gray);
+    padding: 50px 40px;
+    width: 300px;
+  }
+}
 
 /*Serevices End*/
 
@@ -179,10 +251,22 @@ header {
   width: 100%;
   height: auto;
 }
-@media (max-width: 1050px) {
+@media (max-width: 992px) {
   .clients .client {
     width: 200px;
     margin: 15px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .clients .client {
+    width: 180px;
+    margin: 13px;
+  }
+}
+@media (max-width: 576px) {
+  .clients .client {
+    width: 150px;
+    margin: 10px;
   }
 }
 /*Clients End*/
@@ -244,35 +328,17 @@ header {
   text-transform: uppercase;
   text-decoration: none;
 }
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  .our-work .work-info .description {
+    font-size: 30px;
+  }
+  .our-work .works .work .title {
+    font-size: 20px;
+  }
+}
 
 /*Work End*/
-
-/*Story Start*/
-.story {
-  /* background-color: var(--bg-black); */
-}
-.story .info img {
-  width: 130px;
-}
-.story .info p {
-  color: var(--white-color);
-
-  font-family: var(--font-primary);
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 117%; /* 56.16px */
-}
-.story .ceo a {
-  color: var(--primary-color);
-
-  font-family: var(--font-secondary);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: none;
-  text-align: center;
-}
-
-/*Story End*/
