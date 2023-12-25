@@ -5,47 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .meeting {
-        text-align: center;
-        font-size: 20px;
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
-      .meeting a {
-        text-decoration: underline;
-        color: blue;
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        width: 90%;
+        height: 85%;
+        z-index: 9999;
+        animation: popupAnimation 0.3s ease-in-out;
+      }
+
+      .popup-content {
+        text-align: center;
+      }
+
+      .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      @keyframes popupAnimation {
+        from {
+          transform: translate(-50%, -50%) scale(0);
+        }
+        to {
+          transform: translate(-50%, -50%) scale(1);
+        }
       }
     </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
   </head>
   <body>
-    <div style="height: 700px" id="jitsi-container"></div>
-    <div style="height: 700px" id="jitsi-container2"></div>
-    <div class="meeting">
-      Meeting URL is:
-      <a id="meeting-url"></a>
+    <button id="openBtn">Open Popup</button>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <p>This is a popup!</p>
+      </div>
     </div>
-    <script src="https://meet.jit.si/external_api.js"></script>
+
     <script>
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+      const openBtn = document.getElementById("openBtn");
+      const closeBtn = document.getElementById("closeBtn");
+      const popup = document.getElementById("popup");
 
-      var urlencoded = new URLSearchParams();
-      urlencoded.append("token", "lkwiq7t626l3ykwu");
-      urlencoded.append("to", "+201153349948");
-      urlencoded.append("body", "Hi from API 2");
+      openBtn.addEventListener("click", () => {
+        popup.style.display = "block";
+      });
 
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: urlencoded,
-        redirect: "follow",
-      };
-
-      fetch(
-        "https://api.ultramsg.com/instance72102/messages/chat",
-        requestOptions
-      )
-        .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.log("error", error));
+      closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
     </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

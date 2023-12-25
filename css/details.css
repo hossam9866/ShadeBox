@@ -1,3 +1,29 @@
+:root {
+  --primary-color: #fff200;
+  --gray-color: #bfbfbf;
+  --white-color: #f2f2f2;
+  --warna-icon-color: #818181;
+  --bg-gray: #181616;
+  --bg-black: #090909;
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+  --font-title: "Syncopate", sans-serif;
+  --border-bottom: 1px solid var(--gray-color);
+  --o-transition: all 0.26s ease-in-out;
+  /* --plyr-video-control-color: var(--primary-color); */
+  --plyr-video-control-background-hover: var(--primary-color);
+
+  --plyr-range-fill-background: var(--primary-color);
+}
+.plyr__volume input[type="range"] {
+  min-width: 40px;
+  max-width: 40px;
+}
+.plyr__menu__container
+  .plyr__control[role="menuitemradio"][aria-checked="true"]:before {
+  background: var(--primary-color);
+}
+
 /* banner start */
 .banner {
   max-height: 70vh;
@@ -13,6 +39,92 @@
 
 /* banner End */
 
+/*details Start*/
+.details {
+}
+.details .title {
+  color: var(--white-color);
+  font-family: var(--font-primary);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%;
+  margin-bottom: 16px;
+}
+.details .description p {
+  color: var(--gray-color);
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.details .description p {
+  margin-bottom: 65px;
+}
+
+.details .link-container {
+  width: 300px;
+  height: 80px;
+  background-color: var(--bg-gray);
+  padding: 7px 12px;
+}
+.details .link-container .see-project {
+  color: var(--white-color);
+
+  font-family: var(--font-primary);
+  font-size: 14.4px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.details .link-container a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.details .team-side .title {
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  font-size: 17.26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.details .team-side .team {
+  padding: 10px 45px;
+  background-color: var(--bg-gray);
+  overflow-y: auto;
+  height: 100%;
+  scrollbar-color: var(--gray-color); /* Scrollbar color (thumb) */
+  scrollbar-track-color: var(--gray-color);
+}
+.details .team-side .team::-webkit-scrollbar-thumb {
+  background-color: var(--gray-color); /* Color of the scrollbar thumb */
+}
+.details .team-side .team::-webkit-scrollbar {
+  width: 2px;
+}
+.details .team-side .team .member {
+  margin-bottom: 30px;
+}
+.details .team-side .team .member:last-child {
+  margin-bottom: 0px;
+}
+.details .team-side .team .member .job,
+.details .team-side .team .member .name {
+  color: var(--white-color);
+  font-family: var(--font-primary);
+  font-size: 14.4px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.details .team-side .team .member .name {
+  font-weight: 300;
+}
+/*details End*/
+
 /*gallery start*/
 .gallery .item {
   position: relative;
@@ -20,10 +132,14 @@
   height: 280px;
   overflow: hidden;
 }
+.gallery .item > :first-child {
+  width: 100%;
+}
 .gallery .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px;
 }
 .gallery .item iframe,
 .gallery .item video {
@@ -65,5 +181,67 @@
 /*gallery end*/
 
 /*video start*/
-
+video {
+  border-radius: 16px;
+}
 /*video end*/
+
+/*popup start*/
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px 20px 20px 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 800px;
+  z-index: 9999;
+  animation: popupAnimation 0.3s ease-in-out;
+  background-color: var(--bg-gray);
+}
+.popup .carousel-item {
+}
+.popup img {
+  width: 700px;
+  object-fit: cover;
+}
+
+.popup-content {
+  text-align: center;
+}
+.carousel {
+  position: unset;
+}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 26px;
+  color: var(--white-color);
+}
+.carousel-control-prev {
+}
+
+@keyframes popupAnimation {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media (max-width: 850px) {
+  .popup {
+    width: 90%;
+  }
+
+  .popup img {
+    width: 90%;
+  }
+}
+/*popup end*/

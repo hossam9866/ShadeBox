@@ -94,8 +94,8 @@
       </div>
       <!--details start-->
       <div class="details">
-        <div class="row container mx-auto py-5">
-          <div class="col col-12 col-md-8">
+        <div class="row container mx-auto py-5 align-items-start">
+          <div class="col col-12 col-md-8 left-side">
             <div class="title">
               Bringing Your <span class="highlight"> Tale </span> To Life
             </div>
@@ -107,7 +107,9 @@
                 maximus nibh vel eros lacinia ornare. Nulla molestie ut massa eu
                 ullamcorper. Mauris vehicula leo nec velit sollicitudin dictum.
               </p>
-              <div class="link-container float-end">
+              <div
+                class="link-container float-end d-flex flex-column justify-content-between">
+                <div class="see-project">View project at this link.</div>
                 <a href="">CHECK LINK</a>
               </div>
               <p>
@@ -121,9 +123,33 @@
               </p>
             </div>
           </div>
-          <div class="col col-12 col-md-4">
+          <div class="col col-12 col-md-4 team-side d-flex flex-column">
             <div class="title">PRODUCTION TEAM</div>
-            <div class="team">
+            <div class="team flex-grow-1">
+              <div class="member">
+                <div class="job">CAMERA MAN</div>
+                <div class="name">MOHAMMED</div>
+              </div>
+              <div class="member">
+                <div class="job">CAMERA MAN</div>
+                <div class="name">MOHAMMED</div>
+              </div>
+              <div class="member">
+                <div class="job">CAMERA MAN</div>
+                <div class="name">MOHAMMED</div>
+              </div>
+              <div class="member">
+                <div class="job">CAMERA MAN</div>
+                <div class="name">MOHAMMED</div>
+              </div>
+              <div class="member">
+                <div class="job">CAMERA MAN</div>
+                <div class="name">MOHAMMED</div>
+              </div>
+              <div class="member">
+                <div class="job">CAMERA MAN</div>
+                <div class="name">MOHAMMED</div>
+              </div>
               <div class="member">
                 <div class="job">CAMERA MAN</div>
                 <div class="name">MOHAMMED</div>
@@ -179,6 +205,36 @@
         </div>
       </div>
       <!--Story End-->
+      <!--Popup Start-->
+      <div class="popup justify-content-center align-items-center" id="popup">
+        <div class="popup-content">
+          <span class="close" id="closeBtn">&times;</span>
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner content"></div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev">
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next">
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Popup End-->
     </div>
     <footer>
       <!--send mail Start-->
